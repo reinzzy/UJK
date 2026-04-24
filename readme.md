@@ -19,8 +19,7 @@ UJK: Membangun Arsitektur Aplikasi, Database, dan Autentikasi.
    - Proteksi halaman Dashboard; tidak dapat diakses tanpa login.
    - Fitur Logout untuk menghapus sesi pengguna.
 3. **Fitur CRUD (Create, Read, Update, Delete):**
-   - Arsitektur terpisah antara tampilan dan logika.
-   - **Tampil Data:** Menampilkan inventaris dengan format mata uang Rupiah.
+   - **Tampil Data:** Menampilkan inventaris.
    - **Tambah & Edit:** Menggunakan **Bootstrap Modals** untuk kinerja yang lebih cepat.
    - **Hapus:** Fitur hapus data dengan konfirmasi keamanan.
 
