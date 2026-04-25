@@ -2,17 +2,17 @@
 require '../config/koneksi.php';
 
 if (isset($_POST['submit'])) {
-    $nama  = mysqli_real_escape_string($conn, $_POST['nama_barang']);
-    $stok  = $_POST['stok'];
+    $nama_barang = $_POST['nama_barang'];
+    $stok = $_POST['stok'];
     $harga = $_POST['harga'];
+    $id_kategori = $_POST['id_kategori'];
 
-    $query = "INSERT INTO barang (nama_barang, stok, harga) VALUES ('$nama', '$stok', '$harga')";
+    $query = "INSERT INTO barang (nama_barang, stok, harga, id_kategori) 
+              VALUES ('$nama_barang', '$stok', '$harga', '$id_kategori')";
     
     if (mysqli_query($conn, $query)) {
-        header("Location: ../index.php");
-        exit;
+        header("Location: ../index.php?status=success");
     } else {
-        echo "Gagal: " . mysqli_error($conn);
+        echo "Error: " . mysqli_error($conn);
     }
 }
-?>
